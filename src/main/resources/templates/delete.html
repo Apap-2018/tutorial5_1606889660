@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Hapus data</title>
+	<object th:include="fragments/fragment :: css" th:remove="tag"></object>
+	<object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<body>
+	<nav th:replace="fragments/fragment :: navbar"></nav>
+	<a th:href="@{/}">Back to home</a>
+	<h2 th:if="${deleteError}">Data gagal dihapus, ada foreign key, hapus semua flight nya terlebih dahulu</h2>
+	<h2 th:unless="${deleteError}">Data berhasil dihapus</h2>
+	
+</body>
+</html>

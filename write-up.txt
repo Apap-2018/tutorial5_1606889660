@@ -1,0 +1,17 @@
+Write up - Nurul Aisyah - 1606889660 - APAP C
+
+Asumsi : hanya bagian Latihan yang di akhir tutorial
+Berikut adalah hal yang saya lakukan dalam menyelesaikan LATIHAN Tutorial:
+1. Pada setiap method yang ada di controller, saya tambahkan model attribut 
+   berupa title, dan pada fragment.htmlnya saya panggil attribut tile itu 
+   dengan menggunakan th:text
+2. Dengan melihat dokumentasi thymeleaf, untuk menambah row saya perlu membuat 
+   method baru addRow dan addFlightSubmit di controller dengan menambahkan 
+   parameter params pada @requestparam sesuai dengan name button nya. di method 
+   addrow, saya membutuhkan object pilot yang telah ditambahkan flightnya jadi 
+   pake @modelattribut. terus ngebuat baris baru (new flightmodel) dengan mempass/ 
+   mengirim objek pilot yang baru sebagai model.
+   di addFlightsubmit buat method yang ngambil id pilotnya sekarang, dan nerima 
+   objek pilot yang udah ditambahin beberapa flight sebagai modelattribut. habis
+   itu ngeloop semua flight yang baru ditambahin diobject pilot yg diterima itu 
+   untuk di set pilotnya, dan di save.
