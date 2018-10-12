@@ -49,7 +49,6 @@ public class FlightController {
 		List<FlightModel> flights = pilot.getPilotFlight();
 		for(int i= 0; i < flights.size(); i++) {
 			flights.get(i).setPilot(curr);
-			System.out.println(flights.get(i).getFlightNumber());
 			flightService.addFlight(flights.get(i));
 		}
 		
